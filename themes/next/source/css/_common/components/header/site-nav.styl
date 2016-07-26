@@ -1,10 +1,13 @@
 .site-nav-toggle {
   display: none;
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  //position: absolute;
+  position: static;
+  float: right;
+  //top: 10px;
+  //left: 10px;
   +mobile() {
     display: block;
+    margin-top: -20px;
   }
 
   button {

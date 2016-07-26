@@ -17,11 +17,16 @@ html, body { height: 100%; }
 // --------------------------------------------------
 .header-inner {
   margin: 0 auto;
-  padding: 100px 0 70px;
   width: $content-desktop;
+  margin-bottom: 80px;
+  padding: 40px 0;
 
   +desktop-large() {
     .container & { width: $content-desktop-large; }
+  }
+  +mobile() {
+    width: auto;
+    margin-bottom: 50px;
   }
 }
 
