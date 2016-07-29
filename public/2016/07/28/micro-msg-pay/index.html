@@ -84,12 +84,28 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ma Zhichao's Blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="我们的M站接入了微信支付，虽然不是我开发的，但是过程中参与了部分的方案调研，这里把我知道的记录下来。
+
+针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。
+微信外部浏览器方案没参与，不清楚。应该是打开某个特殊的URL调起微信
+微信内部浏览器此时不能使用方案1，因为已经是在微信内部了，不能再调起微信。这时可以走微信内部公众号的方式，用openid调用微信支付接口，用户，公众号的对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5微信支付">
+<meta property="og:url" content="http://yoursite.com/2016/07/28/micro-msg-pay/index.html">
 <meta property="og:site_name" content="Ma Zhichao's Blog">
+<meta property="og:description" content="我们的M站接入了微信支付，虽然不是我开发的，但是过程中参与了部分的方案调研，这里把我知道的记录下来。
+
+针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。
+微信外部浏览器方案没参与，不清楚。应该是打开某个特殊的URL调起微信
+微信内部浏览器此时不能使用方案1，因为已经是在微信内部了，不能再调起微信。这时可以走微信内部公众号的方式，用openid调用微信支付接口，用户，公众号的对">
+<meta property="og:updated_time" content="2016-07-28T12:38:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ma Zhichao's Blog">
+<meta name="twitter:title" content="H5微信支付">
+<meta name="twitter:description" content="我们的M站接入了微信支付，虽然不是我开发的，但是过程中参与了部分的方案调研，这里把我知道的记录下来。
+
+针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。
+微信外部浏览器方案没参与，不清楚。应该是打开某个特殊的URL调起微信
+微信内部浏览器此时不能使用方案1，因为已经是在微信内部了，不能再调起微信。这时可以走微信内部公众号的方式，用openid调用微信支付接口，用户，公众号的对">
 
 
 
@@ -110,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/28/micro-msg-pay/"/>
 
-  <title> 归档 | Ma Zhichao's Blog </title>
+  <title> H5微信支付 | Ma Zhichao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +159,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  page-archive  ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -241,251 +257,128 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 6 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/29/passport/" itemprop="url">
-              
-                <span itemprop="name">如何在上海办理护照</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-29T18:44:54+08:00"
-              content="2016-07-29" >
-          07-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/28/micro-msg-pay/" itemprop="url">
-              
-                <span itemprop="name">H5微信支付</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-28T19:21:30+08:00"
-              content="2016-07-28" >
-          07-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/19/https/" itemprop="url">
-              
-                <span itemprop="name">网站Https改造</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-19T22:22:23+08:00"
-              content="2016-07-19" >
-          07-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/19/sh-juzhuzheng/" itemprop="url">
-              
-                <span itemprop="name">上海居住证办理流程</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-19T10:17:03+08:00"
-              content="2016-07-19" >
-          07-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/16/text-classify/" itemprop="url">
-              
-                <span itemprop="name">文本分类的调研</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-16T23:17:03+08:00"
-              content="2016-07-16" >
-          07-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/10/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hexo Get Started</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-10T23:17:03+08:00"
-              content="2016-07-10" >
-          07-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                H5微信支付
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-28T19:21:30+08:00" content="2016-07-28">
+              2016-07-28
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>我们的M站接入了微信支付，虽然不是我开发的，但是过程中参与了部分的方案调研，这里把我知道的记录下来。</p>
+</blockquote>
+<h4 id="针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。"><a href="#针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。" class="headerlink" title="针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。"></a>针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。</h4><ol>
+<li>微信外部浏览器<br>方案没参与，不清楚。应该是打开某个特殊的URL调起微信</li>
+<li>微信内部浏览器<br>此时不能使用方案1，因为已经是在微信内部了，不能再调起微信。这时可以走微信内部公众号的方式，用openid调用微信支付接口，用户，公众号的对应关系为一个Openid。现在的问题就是如何获取openid了。微信提供了oauth授权接口，只需要openid的话，还可以做到静默授权，用户无感知。授权后拿到token,然后在回调里面用token即可取openid。</li>
+</ol>
+<hr>
+<h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><p><a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN" target="_blank" rel="external">微信支付官方文档</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/19/https/" rel="next" title="网站Https改造">
+                <i class="fa fa-chevron-left"></i> 网站Https改造
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/29/passport/" rel="prev" title="如何在上海办理护照">
+                如何在上海办理护照 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -493,6 +386,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -512,8 +409,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -563,6 +469,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。"><span class="nav-number">1.</span> <span class="nav-text">针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文档"><span class="nav-number">2.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -659,11 +576,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   

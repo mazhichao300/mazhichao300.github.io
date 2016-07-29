@@ -897,7 +897,6 @@ pre .javascript .function {
     text-align: center;
     margin: 0;
     padding: 0;
-    margin-top: -20px;
   }
   .site-meta:before,
   .site-meta:after {
@@ -956,7 +955,6 @@ pre .javascript .function {
 @media (max-width: 767px) {
   .site-nav-toggle {
     display: block;
-    margin-top: -20px;
   }
 }
 .site-nav-toggle button {
@@ -1569,7 +1567,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ddf690;
+  background: #ff8239;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2181,7 +2179,6 @@ hr {
 @media (max-width: 767px) {
   .site-meta {
     margin-left: 10px;
-    margin-top: -20px;
   }
 }
 .site-meta .brand {
