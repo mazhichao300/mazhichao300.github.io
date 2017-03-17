@@ -37,4 +37,7 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 $ hexo deploy
 ```
 
+### 备份
+`hexo deploy`只会将编译结果push到master上，markdown文件并不会推上去。如果自己换了电脑，就面临原始数据丢失的问题。解决方案：在github上新建一个分支，每次编辑后，将原始内容推到分支上即可。
+
 More info: [Deployment](https://hexo.io/docs/deployment.html)
