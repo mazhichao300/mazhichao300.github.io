@@ -20,6 +20,6 @@ $header = "MIME-Version: 1.0\r\n"; //设置MIME版本
 $header .= "Content-type: text/html; charset=utf-8\r\n"; //设置内容类型和字符集
 $header .= "Content-Transfer-Encoding: 8bit\r\n";
 $header .= "From: xx <xx@baidu.com>\r\n"; //设置发件人
-$header .= "Cc: xx@mailexample.com/r/n"; // 设置抄送
+$header .= "Cc: xx@mailexample.com\r\n"; // 设置抄送
 mail($to, $subject, $content, $header);
 ```
