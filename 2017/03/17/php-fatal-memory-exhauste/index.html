@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="PHP," />
 
 
 
@@ -84,12 +84,28 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zhichao's Blog">
-<meta property="og:url" content="http://yoursite.com/tags/scikitlearn/index.html">
+<meta name="description" content="有时运行PHP会报错误Fatal error: Allowed memory size of 134217728 bytes exhauste，直接原因是PHP所占用的内存超过了设定大小
+
+解决办法修改内存限制
+取消限制ini_set(&amp;quot;memory_limit&amp;quot;,&amp;quot;-1&amp;quot;);
+根据需要设定上限ini_set(&amp;quot;memory_limit&amp;quot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP Fatal error Allowed memory size exhauste">
+<meta property="og:url" content="http://yoursite.com/2017/03/17/php-fatal-memory-exhauste/index.html">
 <meta property="og:site_name" content="Zhichao's Blog">
+<meta property="og:description" content="有时运行PHP会报错误Fatal error: Allowed memory size of 134217728 bytes exhauste，直接原因是PHP所占用的内存超过了设定大小
+
+解决办法修改内存限制
+取消限制ini_set(&amp;quot;memory_limit&amp;quot;,&amp;quot;-1&amp;quot;);
+根据需要设定上限ini_set(&amp;quot;memory_limit&amp;quot">
+<meta property="og:updated_time" content="2017-03-17T02:34:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhichao's Blog">
+<meta name="twitter:title" content="PHP Fatal error Allowed memory size exhauste">
+<meta name="twitter:description" content="有时运行PHP会报错误Fatal error: Allowed memory size of 134217728 bytes exhauste，直接原因是PHP所占用的内存超过了设定大小
+
+解决办法修改内存限制
+取消限制ini_set(&amp;quot;memory_limit&amp;quot;,&amp;quot;-1&amp;quot;);
+根据需要设定上限ini_set(&amp;quot;memory_limit&amp;quot">
 
 
 
@@ -110,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/scikitlearn/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/17/php-fatal-memory-exhauste/"/>
 
-  <title> 标签: scikitlearn | Zhichao's Blog </title>
+  <title> PHP Fatal error Allowed memory size exhauste | Zhichao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +159,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -241,46 +257,150 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        scikitlearn
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                PHP Fatal error Allowed memory size exhauste
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-17T10:33:07+08:00" content="2017-03-17">
+              2017-03-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <blockquote>
+<p>有时运行PHP会报错误<code>Fatal error: Allowed memory size of 134217728 bytes exhauste</code>，直接原因是PHP所占用的内存超过了设定大小</p>
+</blockquote>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="修改内存限制"><a href="#修改内存限制" class="headerlink" title="修改内存限制"></a>修改内存限制</h3><ul>
+<li>取消限制<code>ini_set(&quot;memory_limit&quot;,&quot;-1&quot;);</code></li>
+<li>根据需要设定上限<code>ini_set(&quot;memory_limit&quot;,&quot;2048M&quot;);</code></li>
+</ul>
+<h3 id="通过优化程序以减少内存占用"><a href="#通过优化程序以减少内存占用" class="headerlink" title="通过优化程序以减少内存占用"></a>通过优化程序以减少内存占用</h3><ul>
+<li>变量使用后，及时<code>unset()</code>等</li>
+</ul>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/07/16/text-classify/" itemprop="url">
-              
-                <span itemprop="name">文本分类的调研</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-16T23:17:03+08:00"
-              content="2016-07-16" >
-          07-16
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag">#PHP</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/08/sh-gongjijin/" rel="next" title="上海市浦东新区公积金租赁提取">
+                <i class="fa fa-chevron-left"></i> 上海市浦东新区公积金租赁提取
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -288,6 +408,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -307,8 +431,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -376,6 +509,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">1.</span> <span class="nav-text">解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改内存限制"><span class="nav-number">1.1.</span> <span class="nav-text">修改内存限制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过优化程序以减少内存占用"><span class="nav-number">1.2.</span> <span class="nav-text">通过优化程序以减少内存占用</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -472,6 +616,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
