@@ -2,7 +2,7 @@
 layout: post
 title:  "上海居住证办理流程"
 date:   2016-07-19 10:17:03 +0800
-categories: [Life]
+categories: [生活]
 tags: [生活]
 ---
 

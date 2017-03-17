@@ -1,7 +1,7 @@
 ---
 title: 【转】一篇文章让你学会全部跑步知识
 date: 2016-08-03 19:22:36
-categories: [Life]
+categories: [生活]
 tags: [生活]
 ---
 

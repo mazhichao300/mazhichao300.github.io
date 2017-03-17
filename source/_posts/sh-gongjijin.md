@@ -2,7 +2,7 @@
 layout: post
 title:  "上海市浦东新区公积金租赁提取"
 date:   2017-03-08 13:31:03 +0800
-categories: [Life]
+categories: [生活]
 tags: [生活]
 ---
 

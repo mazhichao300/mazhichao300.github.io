@@ -1,7 +1,7 @@
 ---
 title: 如何在上海办理护照
 date: 2016-07-29 18:44:54
-categories: [Life]
+categories: [生活]
 tags: [生活]
 ---
 
