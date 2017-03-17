@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="email,PHP," />
 
 
 
@@ -84,12 +84,22 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zhichao's Blog">
-<meta property="og:url" content="http://yoursite.com/tags/https/index.html">
+<meta name="description" content="经常会有定期发送邮件报表的需求，这里使用HTML写报表模板，然后填充数据后发送。
+
+代码如下1234567891011// $htmlTemplate为HTML模板$content = str_replace($find, $replace, $htmlTemplate);$to = &apos;xxx@baidu.com&apos;;$subject = &apos;数据日报-&apos; . $day;$header = &quot;MIM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP发送HTML格式邮件">
+<meta property="og:url" content="http://yoursite.com/2017/03/17/php-email-html/index.html">
 <meta property="og:site_name" content="Zhichao's Blog">
+<meta property="og:description" content="经常会有定期发送邮件报表的需求，这里使用HTML写报表模板，然后填充数据后发送。
+
+代码如下1234567891011// $htmlTemplate为HTML模板$content = str_replace($find, $replace, $htmlTemplate);$to = &apos;xxx@baidu.com&apos;;$subject = &apos;数据日报-&apos; . $day;$header = &quot;MIM">
+<meta property="og:updated_time" content="2017-03-17T04:51:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhichao's Blog">
+<meta name="twitter:title" content="PHP发送HTML格式邮件">
+<meta name="twitter:description" content="经常会有定期发送邮件报表的需求，这里使用HTML写报表模板，然后填充数据后发送。
+
+代码如下1234567891011// $htmlTemplate为HTML模板$content = str_replace($find, $replace, $htmlTemplate);$to = &apos;xxx@baidu.com&apos;;$subject = &apos;数据日报-&apos; . $day;$header = &quot;MIM">
 
 
 
@@ -110,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/https/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/17/php-email-html/"/>
 
-  <title> 标签: https | Zhichao's Blog </title>
+  <title> PHP发送HTML格式邮件 | Zhichao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +153,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -241,46 +251,146 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        https
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                PHP发送HTML格式邮件
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-17T12:51:23+08:00" content="2017-03-17">
+              2017-03-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <blockquote>
+<p>经常会有定期发送邮件报表的需求，这里使用HTML写报表模板，然后填充数据后发送。</p>
+</blockquote>
+<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// $htmlTemplate为HTML模板</span></div><div class="line">$content = str_replace($find, $replace, $htmlTemplate);</div><div class="line"></div><div class="line">$to = <span class="string">'xxx@baidu.com'</span>;</div><div class="line">$subject = <span class="string">'数据日报-'</span> . $day;</div><div class="line">$header = <span class="string">"MIME-Version: 1.0\r\n"</span>; <span class="comment">//设置MIME版本</span></div><div class="line">$header .= <span class="string">"Content-type: text/html; charset=utf-8\r\n"</span>; <span class="comment">//设置内容类型和字符集</span></div><div class="line">$header .= <span class="string">"Content-Transfer-Encoding: 8bit\r\n"</span>;</div><div class="line">$header .= <span class="string">"From: xx &lt;xx@baidu.com&gt;\r\n"</span>; <span class="comment">//设置发件人</span></div><div class="line">$header .= <span class="string">"Cc: xx@mailexample.com/r/n"</span>; <span class="comment">// 设置抄送</span></div><div class="line">mail($to, $subject, $content, $header);</div></pre></td></tr></table></figure>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/07/19/https/" itemprop="url">
-              
-                <span itemprop="name">网站Https改造</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-19T22:22:23+08:00"
-              content="2016-07-19" >
-          07-19
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/email/" rel="tag">#email</a>
+          
+            <a href="/tags/PHP/" rel="tag">#PHP</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/17/php-fatal-memory-exhauste/" rel="next" title="PHP Fatal error Allowed memory size exhauste">
+                <i class="fa fa-chevron-left"></i> PHP Fatal error Allowed memory size exhauste
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -288,6 +398,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -307,8 +421,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -376,6 +499,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码如下"><span class="nav-number">1.</span> <span class="nav-text">代码如下</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -472,6 +606,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
