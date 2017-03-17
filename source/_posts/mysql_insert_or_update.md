@@ -16,4 +16,4 @@ ON DUPLICATE KEY UPDATE c=3;
 
 -----
 ## 参考文档
-[ON DUPLICATE KEY UPDATE重复插入时更新](hhttp://lobert.iteye.com/blog/1604122)
+[ON DUPLICATE KEY UPDATE重复插入时更新](http://lobert.iteye.com/blog/1604122)

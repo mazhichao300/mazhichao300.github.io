@@ -85,11 +85,11 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Ma Zhichao's Blog">
+<meta property="og:title" content="Zhichao's Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Ma Zhichao's Blog">
+<meta property="og:site_name" content="Zhichao's Blog">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ma Zhichao's Blog">
+<meta name="twitter:title" content="Zhichao's Blog">
 
 
 
@@ -112,7 +112,7 @@
 
   <link rel="canonical" href="http://yoursite.com/"/>
 
-  <title> Ma Zhichao's Blog </title>
+  <title> Zhichao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -155,7 +155,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Ma Zhichao's Blog</span>
+      <span class="site-title">Zhichao's Blog</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -265,8 +265,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/29/passport/" itemprop="url">
-                  如何在上海办理护照
+                <a class="post-title-link" href="/2017/03/17/php-email-html/" itemprop="url">
+                  PHP发送HTML格式邮件
                 </a>
               
             
@@ -279,11 +279,30 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-29T18:44:54+08:00" content="2016-07-29">
-              2016-07-29
+            <time itemprop="dateCreated" datetime="2017-03-17T12:51:23+08:00" content="2017-03-17">
+              2017-03-17
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -310,19 +329,13 @@
         
           
           
-终于拿到了护照，感觉做事情还是易早不易迟，要不然等到需要的时候耽误事~
+经常会有定期发送邮件报表的需求，这里使用HTML写报表模板，然后填充数据后发送。
 
-在上海办理居住证的条件（满足其一即可）
-上海市户口；
-上海市居住证（需要1年有效期的那种，临时的不行）
-在上海连续缴纳1年社保（最好社保打印个单子确认一下）；
-
-护照办理流程
-网上预约一下，据说预约会加快出证速度（这步可以省
+代码如下1234567891011// $htmlTemplate为HTML模板$content = str_replace($find, $replace, $htmlTemplate);$to = 'xxx@b
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/29/passport/#more" rel="contents">
+            <a class="btn" href="/2017/03/17/php-email-html/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -373,8 +386,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/28/micro-msg-pay/" itemprop="url">
-                  H5微信支付
+                <a class="post-title-link" href="/2017/03/17/php-fatal-memory-exhauste/" itemprop="url">
+                  PHP Fatal error Allowed memory size exhauste
                 </a>
               
             
@@ -387,11 +400,30 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-28T19:21:30+08:00" content="2016-07-28">
-              2016-07-28
+            <time itemprop="dateCreated" datetime="2017-03-17T10:33:07+08:00" content="2017-03-17">
+              2017-03-17
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -418,15 +450,14 @@
         
           
           
-我们的M站接入了微信支付，虽然不是我开发的，但是过程中参与了部分的方案调研，这里把我知道的记录下来。
+有时运行PHP会报错误Fatal error: Allowed memory size of 134217728 bytes exhauste，直接原因是PHP所占用的内存超过了设定大小
 
-针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。
-微信外部浏览器方案没参与，不清楚。应该是打开某个特殊的URL调起微信
-微信内部浏览器此时不能使用方案1，因为已经是在微信内部
+解决办法修改内存限制
+取消限制ini_set(&quot;memory_limit&quot;,&quot;
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/28/micro-msg-pay/#more" rel="contents">
+            <a class="btn" href="/2017/03/17/php-fatal-memory-exhauste/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -477,8 +508,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/19/https/" itemprop="url">
-                  网站Https改造
+                <a class="post-title-link" href="/2017/03/08/sh-gongjijin/" itemprop="url">
+                  上海市浦东新区公积金租赁提取
                 </a>
               
             
@@ -491,8 +522,253 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-19T22:22:23+08:00" content="2016-07-19">
-              2016-07-19
+            <time itemprop="dateCreated" datetime="2017-03-08T13:31:03+08:00" content="2017-03-08">
+              2017-03-08
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Life/" itemprop="url" rel="index">
+                    <span itemprop="name">Life</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          要求家庭名下上海市内无房产，在上海市租房居住。
+准备工作
+查询好自己的公积金帐号
+准备好上海市内的一张借记卡，并问清开户支行
+已婚的带好结婚证
+
+办理流程公积金管理中心办理流程
+前往浦东新区公积金管理中心，地址：浦城路812号2楼
+按照要求填写两个表格：提取申请表和房屋状况查询申请表（为了查询名下是
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/08/sh-gongjijin/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/06/how_to_install_rom_mi_max/" itemprop="url">
+                  小米Max刷机，救砖
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-06T19:56:23+08:00" content="2017-01-06">
+              2017-01-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/手机/" itemprop="url" rel="index">
+                    <span itemprop="name">手机</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          小米Max刷机小米Max救砖使用官方的线刷包可以救砖
+
+          
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/06/how_to_install_rom_mi_max/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/06/mysql_insert_or_update/" itemprop="url">
+                  insert or update
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-06T19:51:28+08:00" content="2016-12-06">
+              2016-12-06
             </time>
           </span>
 
@@ -540,12 +816,14 @@
       
         
           
-          背景我们的网站是nginx+php开发的，需要进行https的改造。
-技术前提在https的页面中是不允许加载http资源的，包括js,css等文件（图片被认为是安全的资源，大多数浏览器是允许http访问的）。因为页面中可能会写死很多的资源请求链接为http，所以我们https改造的难点就在这里，要
+          
+实现记录有则更新，无则插入
+
+ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICATE KEY UPDATE语句12INSERT INTO table (a,b,c) VALUES (1,2,3),(4,5,6)ON DUPLICATE K
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/19/https/#more" rel="contents">
+            <a class="btn" href="/2016/12/06/mysql_insert_or_update/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -596,8 +874,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/19/sh-juzhuzheng/" itemprop="url">
-                  上海居住证办理流程
+                <a class="post-title-link" href="/2016/12/06/mysql_load_data_infile/" itemprop="url">
+                  Mysql load data infile
                 </a>
               
             
@@ -610,8 +888,496 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-19T10:17:03+08:00" content="2016-07-19">
-              2016-07-19
+            <time itemprop="dateCreated" datetime="2016-12-06T19:51:28+08:00" content="2016-12-06">
+              2016-12-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index">
+                    <span itemprop="name">Web</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+背景：兄弟团队每天定时提供一份全量文件，我们需要将数据更新到DB中。
+
+最开始的方案是逐条数据到DB中判断，有则更新，无则插入，同时对变动过的记录更新时间戳，最后将表中此次未更新的记录全部删掉。但是因数据量较大（300W条），hhvm执行到一定程度就会内存溢出，然后停止运行。
+load data 
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/06/mysql_load_data_infile/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/05/card-safe/" itemprop="url">
+                  信用卡安全
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-05T20:06:28+08:00" content="2016-12-05">
+              2016-12-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/生活/" itemprop="url" rel="index">
+                    <span itemprop="name">生活</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+2016.8.11下午收到两条短信，北京银行信用卡被盗刷1.8W余元，2016.12.5日，盗刷款项全部追回，这里记录一下。
+
+被盗刷后做的事情
+电话客服，挂失了卡片（挂失太快，又由于无交易密码，ATM不认，也无法到通过交易自证卡片在身边，客服建议尽快报警）；
+让同事对卡片拍照，相当于人证了（不知
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/05/card-safe/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/22/web-safe/" itemprop="url">
+                  常见的安全漏洞简介
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-22T20:07:07+08:00" content="2016-08-22">
+              2016-08-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index">
+                    <span itemprop="name">Web</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          安全漏洞分类作用于服务端的漏洞，作用于客户端的漏洞
+常见的服务端漏洞不好的设计123456789101112131415161718基于机制不可知来隐藏敏感信息是不安全的&lt;?php// 用可预测的COOKIE值判断管理员if ('admin' == $_COOKIE['role']) &#12
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/22/web-safe/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/03/runner/" itemprop="url">
+                  【转】一篇文章让你学会全部跑步知识
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-03T19:22:36+08:00" content="2016-08-03">
+              2016-08-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Life/" itemprop="url" rel="index">
+                    <span itemprop="name">Life</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          转载一篇跑步相关的文章跑步大全：一篇文章让你学会全部跑步知识
+定个16年底的目标
+跑步总数达到300KM，还有140KM；
+骑行达到700KM，还剩300KM；
+
+坚持坚持~
+
+          
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/03/runner/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/29/passport/" itemprop="url">
+                  如何在上海办理护照
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-29T18:44:54+08:00" content="2016-07-29">
+              2016-07-29
             </time>
           </span>
 
@@ -660,247 +1426,19 @@
         
           
           
-最近去办理了上海市居住证，总结一下流程。
+终于拿到了护照，感觉做事情还是易早不易迟，要不然等到需要的时候耽误事~
 
-租赁备案办理流程
-居委会出具的房屋租赁合同登记备案办证通知单
-租赁合同原件复印件
-房东身份证、共有人身份证复印件
-房产证复印件
-承租人身份证
+在上海办理护照的条件（满足其一即可）
+上海市户口；
+上海市居住证（需要1年有效期的那种，临时的不行）
+在上海连续缴纳1年社保（最好社保打印个单子确认一下）；
 
-居住证办理流程
-租赁备案证明
-承租人身份证、劳动合同、满6个月的社保单（注：若身份证地址与实际户籍地址不一致要
+护照办理流程
+网上预约一下，据说预约会加快出证速度（这步可以省略
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/19/sh-juzhuzheng/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/16/text-classify/" itemprop="url">
-                  文本分类的调研
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-16T23:17:03+08:00" content="2016-07-16">
-              2016-07-16
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Machine-Learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Machine-Learning</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-最近拿到一批用户对产品的反馈数据，需要进行文本分类，找出用户的痛点，从而发掘产品的优化方向。
-
-本文主要调研了：
-LDA主题分类模型（python gensim包）；
-Naive Bayes;
-SVM;
-
-首先调研了LDA主题分类模型，使用python gensim包，代码如下：123456789
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/16/text-classify/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/10/hello-world/" itemprop="url">
-                  Hexo Get Started
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-10T23:17:03+08:00" content="2016-07-10">
-              2016-07-10
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/10/hello-world/#more" rel="contents">
+            <a class="btn" href="/2016/07/29/passport/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -933,6 +1471,10 @@ SVM;
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -971,7 +1513,7 @@ SVM;
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -979,7 +1521,7 @@ SVM;
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -988,7 +1530,7 @@ SVM;
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1006,6 +1548,24 @@ SVM;
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="Baidu" title="Title" target="_blank">Title</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.baidu.com/" title="Link" target="_blank">Link</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
       </section>
@@ -1025,7 +1585,7 @@ SVM;
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
