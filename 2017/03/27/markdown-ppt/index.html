@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="mysql," />
+  <meta name="keywords" content="markdown,ppt," />
 
 
 
@@ -84,28 +84,25 @@
 
 
 
-<meta name="description" content="实现记录有则更新，无则插入
+<meta name="description" content="使用LandSlide将MarkDown生成为HTML文件，用来分享。
 
-ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICATE KEY UPDATE语句12INSERT INTO table (a,b,c) VALUES (1,2,3),(4,5,6)ON DUPLICATE KEY UPDATE c=3;
-
-参考文档ON DUPLICATE KEY UPDATE重复插入时更新">
+LandSlide安装使用pip安装12345//先安装pip，如果已经安装，跳过此步$ sudo easy_install pip//安装landslide$ pip install landslide
+源码安装1234$ git clone https://github.com/adamzap/landslide.gi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="insert or update">
-<meta property="og:url" content="http://yoursite.com/2016/12/06/mysql_insert_or_update/index.html">
+<meta property="og:title" content="使用markdown书写PPT">
+<meta property="og:url" content="http://yoursite.com/2017/03/27/markdown-ppt/index.html">
 <meta property="og:site_name" content="Zhichao's Blog">
-<meta property="og:description" content="实现记录有则更新，无则插入
+<meta property="og:description" content="使用LandSlide将MarkDown生成为HTML文件，用来分享。
 
-ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICATE KEY UPDATE语句12INSERT INTO table (a,b,c) VALUES (1,2,3),(4,5,6)ON DUPLICATE KEY UPDATE c=3;
-
-参考文档ON DUPLICATE KEY UPDATE重复插入时更新">
-<meta property="og:updated_time" content="2017-03-17T09:19:40.000Z">
+LandSlide安装使用pip安装12345//先安装pip，如果已经安装，跳过此步$ sudo easy_install pip//安装landslide$ pip install landslide
+源码安装1234$ git clone https://github.com/adamzap/landslide.gi">
+<meta property="og:updated_time" content="2017-03-27T09:37:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="insert or update">
-<meta name="twitter:description" content="实现记录有则更新，无则插入
+<meta name="twitter:title" content="使用markdown书写PPT">
+<meta name="twitter:description" content="使用LandSlide将MarkDown生成为HTML文件，用来分享。
 
-ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICATE KEY UPDATE语句12INSERT INTO table (a,b,c) VALUES (1,2,3),(4,5,6)ON DUPLICATE KEY UPDATE c=3;
-
-参考文档ON DUPLICATE KEY UPDATE重复插入时更新">
+LandSlide安装使用pip安装12345//先安装pip，如果已经安装，跳过此步$ sudo easy_install pip//安装landslide$ pip install landslide
+源码安装1234$ git clone https://github.com/adamzap/landslide.gi">
 
 
 
@@ -126,9 +123,9 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/06/mysql_insert_or_update/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/27/markdown-ppt/"/>
 
-  <title> insert or update | Zhichao's Blog </title>
+  <title> 使用markdown书写PPT | Zhichao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -278,7 +275,7 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
             
             
               
-                insert or update
+                使用markdown书写PPT
               
             
           </h1>
@@ -290,8 +287,8 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-06T19:51:28+08:00" content="2016-12-06">
-              2016-12-06
+            <time itemprop="dateCreated" datetime="2017-03-27T17:24:36+08:00" content="2017-03-27">
+              2017-03-27
             </time>
           </span>
 
@@ -304,8 +301,8 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index">
-                    <span itemprop="name">Web</span>
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -338,11 +335,24 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
 
       
         <blockquote>
-<p>实现记录有则更新，无则插入</p>
+<p>使用<a href="https://github.com/adamzap/landslide" target="_blank" rel="external">LandSlide</a>将MarkDown生成为HTML文件，用来分享。</p>
 </blockquote>
-<h2 id="ON-DUPLICATE-KEY-UPDATE"><a href="#ON-DUPLICATE-KEY-UPDATE" class="headerlink" title="ON DUPLICATE KEY UPDATE"></a>ON DUPLICATE KEY UPDATE</h2><p>需要先设置UNIQUE KEY索引，然后使用ON DUPLICATE KEY UPDATE语句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">INSERT INTO table (a,b,c) VALUES (1,2,3),(4,5,6)</div><div class="line">ON DUPLICATE KEY UPDATE c=3;</div></pre></td></tr></table></figure></p>
+<h2 id="LandSlide安装"><a href="#LandSlide安装" class="headerlink" title="LandSlide安装"></a>LandSlide安装</h2><h3 id="使用pip安装"><a href="#使用pip安装" class="headerlink" title="使用pip安装"></a>使用<code>pip</code>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//先安装pip，如果已经安装，跳过此步</div><div class="line">$ sudo easy_install pip</div><div class="line"></div><div class="line">//安装landslide</div><div class="line">$ pip install landslide</div></pre></td></tr></table></figure>
+<h3 id="源码安装"><a href="#源码安装" class="headerlink" title="源码安装"></a>源码安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/adamzap/landslide.git</div><div class="line">$ cd landslide</div><div class="line">$ python setup.py build</div><div class="line">$ sudo python setup.py install</div></pre></td></tr></table></figure>
+<h2 id="编写md文件"><a href="#编写md文件" class="headerlink" title="编写md文件"></a>编写md文件</h2><p>官方测试用例</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="section"># Landslide</span></div><div class="line"></div><div class="line"> ---</div><div class="line"></div><div class="line"> # Overview</div><div class="line"></div><div class="line"> Generate HTML5 slideshows from markdown, ReST, or textile.</div><div class="line"></div><div class="line"> ![](http://i.imgur.com/bc2xk.png)&#123;ImgCap&#125;python&#123;/ImgCap&#125;</div><div class="line"></div><div class="line"> Landslide is primarily written in Python, but it's themes use:</div><div class="line"></div><div class="line"> - HTML5</div><div class="line"> - Javascript</div><div class="line"> - CSS</div><div class="line"></div><div class="line"> ---</div><div class="line"></div><div class="line"> # Code Sample</div><div class="line"></div><div class="line"> Landslide supports code snippets</div><div class="line"></div><div class="line"><span class="code">     !python</span></div><div class="line"><span class="code">     def log(self, message, level='notice'):</span></div><div class="line"><span class="code">         if self.logger and not callable(self.logger):</span></div><div class="line"><span class="code">             raise ValueError(u"Invalid logger set, must be a callable")</span></div><div class="line"></div><div class="line"><span class="code">         if self.verbose and self.logger:</span></div><div class="line"><span class="code">             self.logger(message, level)</span></div></pre></td></tr></table></figure>
+<p><strong>简单说明：</strong></p>
+<ul>
+<li><code>---</code>用来表示当前页面结束</li>
+<li>代码段只支持<code>tab</code>符号方式</li>
+</ul>
+<h2 id="生成HTML文件"><a href="#生成HTML文件" class="headerlink" title="生成HTML文件"></a>生成HTML文件</h2><p><code>$ landslide test.md -i -o &gt; test.html</code></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">h:        展示帮助</div><div class="line">← →:      上/下一张幻灯片</div><div class="line">ESC:      展示目录</div><div class="line">n:        显示当前是第几张幻灯片</div><div class="line">b:        屏幕全黑</div><div class="line">e:        使当前幻灯片最大化</div><div class="line">3:        展示伪3D效果</div><div class="line">c:        取消显示前后幻灯片预览，只显示当前幻灯片</div></pre></td></tr></table></figure>
 <hr>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://lobert.iteye.com/blog/1604122" target="_blank" rel="external">ON DUPLICATE KEY UPDATE重复插入时更新</a></p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><a href="http://www.jianshu.com/p/e063303317cb" target="_blank" rel="external">用Markdown写一个极客范儿的PPT</a></li>
+<li><a href="https://github.com/adamzap/landslide" target="_blank" rel="external">官网</a></li>
+</ul>
 
       
     </div>
@@ -365,7 +375,9 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
       
         <div class="post-tags">
           
-            <a href="/tags/mysql/" rel="tag">#mysql</a>
+            <a href="/tags/markdown/" rel="tag">#markdown</a>
+          
+            <a href="/tags/ppt/" rel="tag">#ppt</a>
           
         </div>
       
@@ -374,17 +386,13 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/06/mysql_load_data_infile/" rel="next" title="Mysql load data infile">
-                <i class="fa fa-chevron-left"></i> Mysql load data infile
+              <a href="/2017/03/17/php-email-html/" rel="next" title="PHP发送HTML格式邮件">
+                <i class="fa fa-chevron-left"></i> PHP发送HTML格式邮件
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/06/how_to_install_rom_mi_max/" rel="prev" title="小米Max刷机，救砖">
-                小米Max刷机，救砖 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -516,7 +524,7 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ON-DUPLICATE-KEY-UPDATE"><span class="nav-number">1.</span> <span class="nav-text">ON DUPLICATE KEY UPDATE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">2.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LandSlide安装"><span class="nav-number">1.</span> <span class="nav-text">LandSlide安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用pip安装"><span class="nav-number">1.1.</span> <span class="nav-text">使用pip安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码安装"><span class="nav-number">1.2.</span> <span class="nav-text">源码安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写md文件"><span class="nav-number">2.</span> <span class="nav-text">编写md文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成HTML文件"><span class="nav-number">3.</span> <span class="nav-text">生成HTML文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快捷键"><span class="nav-number">4.</span> <span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">5.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
           </div>
         </section>
