@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="https," />
+  <meta name="keywords" content="JVM," />
 
 
 
@@ -84,25 +84,24 @@
 
 
 
-<meta name="description" content="背景我们的网站是nginx+php开发的，需要进行https的改造。
-技术前提在https的页面中是不允许加载http资源的，包括js,css等文件（图片被认为是安全的资源，大多数浏览器是允许http访问的）。因为页面中可能会写死很多的资源请求链接为http，所以我们https改造的难点就在这里，要将所有的资源请求改为https的。
-改造步骤
-nginx打开https功能，证书制作（测试环境，线上">
+<meta name="description" content="JVM内存区域划分内存区域划分图
+各区域说明程序计数器（Program Counter Register）存储下一条要执行的字节码指令，线程私有
+JAVA虚拟机栈线程私有，每个方法被执行时都会创建一个栈帧用于存储局部变量表、操作数栈、动态链接、方法出口等信息。每一个方法被调用直至执行完的过程，就对应着一个栈帧在虚拟机栈中从入栈到出栈的过程。局部变量表存储了编译期可知的各种基本的数据类型（boole">
 <meta property="og:type" content="article">
-<meta property="og:title" content="网站Https改造">
-<meta property="og:url" content="http://yoursite.com/2016/07/19/https/index.html">
+<meta property="og:title" content="JVM内存模型">
+<meta property="og:url" content="http://yoursite.com/2017/04/10/jvm_memory_model/index.html">
 <meta property="og:site_name" content="Zhichao's Blog">
-<meta property="og:description" content="背景我们的网站是nginx+php开发的，需要进行https的改造。
-技术前提在https的页面中是不允许加载http资源的，包括js,css等文件（图片被认为是安全的资源，大多数浏览器是允许http访问的）。因为页面中可能会写死很多的资源请求链接为http，所以我们https改造的难点就在这里，要将所有的资源请求改为https的。
-改造步骤
-nginx打开https功能，证书制作（测试环境，线上">
-<meta property="og:updated_time" content="2017-03-17T09:19:40.000Z">
+<meta property="og:description" content="JVM内存区域划分内存区域划分图
+各区域说明程序计数器（Program Counter Register）存储下一条要执行的字节码指令，线程私有
+JAVA虚拟机栈线程私有，每个方法被执行时都会创建一个栈帧用于存储局部变量表、操作数栈、动态链接、方法出口等信息。每一个方法被调用直至执行完的过程，就对应着一个栈帧在虚拟机栈中从入栈到出栈的过程。局部变量表存储了编译期可知的各种基本的数据类型（boole">
+<meta property="og:image" content="http://oniemuf9p.bkt.clouddn.com/jvm_memory_model.png">
+<meta property="og:updated_time" content="2017-04-10T07:04:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="网站Https改造">
-<meta name="twitter:description" content="背景我们的网站是nginx+php开发的，需要进行https的改造。
-技术前提在https的页面中是不允许加载http资源的，包括js,css等文件（图片被认为是安全的资源，大多数浏览器是允许http访问的）。因为页面中可能会写死很多的资源请求链接为http，所以我们https改造的难点就在这里，要将所有的资源请求改为https的。
-改造步骤
-nginx打开https功能，证书制作（测试环境，线上">
+<meta name="twitter:title" content="JVM内存模型">
+<meta name="twitter:description" content="JVM内存区域划分内存区域划分图
+各区域说明程序计数器（Program Counter Register）存储下一条要执行的字节码指令，线程私有
+JAVA虚拟机栈线程私有，每个方法被执行时都会创建一个栈帧用于存储局部变量表、操作数栈、动态链接、方法出口等信息。每一个方法被调用直至执行完的过程，就对应着一个栈帧在虚拟机栈中从入栈到出栈的过程。局部变量表存储了编译期可知的各种基本的数据类型（boole">
+<meta name="twitter:image" content="http://oniemuf9p.bkt.clouddn.com/jvm_memory_model.png">
 
 
 
@@ -123,9 +122,9 @@ nginx打开https功能，证书制作（测试环境，线上">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/19/https/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/10/jvm_memory_model/"/>
 
-  <title> 网站Https改造 | Zhichao's Blog </title>
+  <title> JVM内存模型 | Zhichao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +276,7 @@ nginx打开https功能，证书制作（测试环境，线上">
             
             
               
-                网站Https改造
+                JVM内存模型
               
             
           </h1>
@@ -289,8 +288,8 @@ nginx打开https功能，证书制作（测试环境，线上">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-19T22:22:23+08:00" content="2016-07-19">
-              2016-07-19
+            <time itemprop="dateCreated" datetime="2017-04-10T14:40:54+08:00" content="2017-04-10">
+              2017-04-10
             </time>
           </span>
 
@@ -303,8 +302,8 @@ nginx打开https功能，证书制作（测试环境，线上">
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index">
-                    <span itemprop="name">Web</span>
+                  <a href="/categories/JAVA/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVA</span>
                   </a>
                 </span>
 
@@ -341,13 +340,12 @@ nginx打开https功能，证书制作（测试环境，线上">
       
 
       
-        <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>我们的网站是nginx+php开发的，需要进行https的改造。</p>
-<h3 id="技术前提"><a href="#技术前提" class="headerlink" title="技术前提"></a>技术前提</h3><p>在https的页面中是不允许加载http资源的，包括js,css等文件（图片被认为是安全的资源，大多数浏览器是允许http访问的）。因为页面中可能会写死很多的资源请求链接为http，所以我们https改造的难点就在这里，要将所有的资源请求改为https的。</p>
-<h3 id="改造步骤"><a href="#改造步骤" class="headerlink" title="改造步骤"></a>改造步骤</h3><ol>
-<li>nginx打开https功能，证书制作（测试环境，线上环境由OP部门完成，具体证书认证之类的流程不太清楚）；完成第1步后，页面就可以通过https访问，但是打开页面后基本都是样式错乱，原因就是页面需要的JS,CSS等资源是http的请求，被浏览器block掉了；</li>
-<li>将资源请求改为https，主要需要找到这些资源是在哪里发出去的，把协议改成<code>https</code>或者用<code>//</code>让浏览器去自动选择；</li>
-<li>完成以上两步，基本就可以了。但是也有一些资源是第三方维护的，不支持https，这时我们是通过代理解决的；我们技术方案是服务器回包给浏览器前，将包拦截，匹配出需要进行代理替换的域名，改为代理域名。</li>
-</ol>
+        <h2 id="JVM内存区域划分"><a href="#JVM内存区域划分" class="headerlink" title="JVM内存区域划分"></a>JVM内存区域划分</h2><h3 id="内存区域划分图"><a href="#内存区域划分图" class="headerlink" title="内存区域划分图"></a>内存区域划分图</h3><p><img src="http://oniemuf9p.bkt.clouddn.com/jvm_memory_model.png" alt=""></p>
+<h3 id="各区域说明"><a href="#各区域说明" class="headerlink" title="各区域说明"></a>各区域说明</h3><h4 id="程序计数器（Program-Counter-Register）"><a href="#程序计数器（Program-Counter-Register）" class="headerlink" title="程序计数器（Program Counter Register）"></a>程序计数器（Program Counter Register）</h4><p>存储下一条要执行的字节码指令，线程私有</p>
+<h4 id="JAVA虚拟机栈"><a href="#JAVA虚拟机栈" class="headerlink" title="JAVA虚拟机栈"></a>JAVA虚拟机栈</h4><p>线程私有，每个方法被执行时都会创建一个栈帧用于存储局部变量表、操作数栈、动态链接、方法出口等信息。每一个方法被调用直至执行完的过程，就对应着一个栈帧在虚拟机栈中从入栈到出栈的过程。<br><code>局部变量表</code>存储了编译期可知的各种基本的数据类型（boolean,byte,char,short,int,float,double,long），对象引用和returnAddress类型（指向了一条字节码指令的地址）。</p>
+<h4 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h4><p>与栈类似，区别是虚拟机栈为执行JAVA方法（也就是字节码）服务，而本地方法栈为虚拟机使用到的Native方法服务。</p>
+<h4 id="JAVA堆"><a href="#JAVA堆" class="headerlink" title="JAVA堆"></a>JAVA堆</h4><p>线程共享的一块内存区域，用于存放对象实例。是GC的主要区域，因此也被称为GC堆。</p>
+<h4 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h4><p>线程共享，存储已经被虚拟机加载的类信息、常量、静态变量、即时编译后的代码等数据。也被称为永久代。</p>
 
       
     </div>
@@ -370,7 +368,7 @@ nginx打开https功能，证书制作（测试环境，线上">
       
         <div class="post-tags">
           
-            <a href="/tags/https/" rel="tag">#https</a>
+            <a href="/tags/JVM/" rel="tag">#JVM</a>
           
         </div>
       
@@ -379,17 +377,13 @@ nginx打开https功能，证书制作（测试环境，线上">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/19/sh-juzhuzheng/" rel="next" title="上海居住证办理流程">
-                <i class="fa fa-chevron-left"></i> 上海居住证办理流程
+              <a href="/2017/03/27/markdown-ppt/" rel="next" title="使用markdown书写PPT">
+                <i class="fa fa-chevron-left"></i> 使用markdown书写PPT
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/28/micro-msg-pay/" rel="prev" title="H5微信支付">
-                H5微信支付 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -517,7 +511,7 @@ nginx打开https功能，证书制作（测试环境，线上">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#技术前提"><span class="nav-number">2.</span> <span class="nav-text">技术前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改造步骤"><span class="nav-number">3.</span> <span class="nav-text">改造步骤</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM内存区域划分"><span class="nav-number">1.</span> <span class="nav-text">JVM内存区域划分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内存区域划分图"><span class="nav-number">1.1.</span> <span class="nav-text">内存区域划分图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各区域说明"><span class="nav-number">1.2.</span> <span class="nav-text">各区域说明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序计数器（Program-Counter-Register）"><span class="nav-number">1.2.1.</span> <span class="nav-text">程序计数器（Program Counter Register）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JAVA虚拟机栈"><span class="nav-number">1.2.2.</span> <span class="nav-text">JAVA虚拟机栈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地方法栈"><span class="nav-number">1.2.3.</span> <span class="nav-text">本地方法栈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JAVA堆"><span class="nav-number">1.2.4.</span> <span class="nav-text">JAVA堆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法区"><span class="nav-number">1.2.5.</span> <span class="nav-text">方法区</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
