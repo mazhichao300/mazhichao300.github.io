@@ -33,3 +33,5 @@ tags: [java,maven]
 
 **mirror**则是仓库的镜像，比如maven官方仓库A，阿里云提供了一个仓库B，和A完全一致，就称为A的镜像。
 
+[参考](https://my.oschina.net/sunchp/blog/100634)
+
