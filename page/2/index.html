@@ -267,8 +267,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/06/mysql_insert_or_update/" itemprop="url">
-                  insert or update
+                <a class="post-title-link" href="/2016/12/06/mysql_load_data_infile/" itemprop="url">
+                  Mysql load data infile
                 </a>
               
             
@@ -331,13 +331,14 @@
         
           
           
-实现记录有则更新，无则插入
+背景：兄弟团队每天定时提供一份全量文件，我们需要将数据更新到DB中。
 
-ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICATE KEY UPDATE语句12INSERT INTO table (a,b,c) VALUES (1,2,3),(4,5,6)ON DUPLICATE K
+最开始的方案是逐条数据到DB中判断，有则更新，无则插入，同时对变动过的记录更新时间戳，最后将表中此次未更新的记录全部删掉。但是因数据量较大（300W条），hhvm执行到一定程度就会内存溢出，然后停止运行。
+load data 
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/06/mysql_insert_or_update/#more" rel="contents">
+            <a class="btn" href="/2016/12/06/mysql_load_data_infile/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>

@@ -108,7 +108,7 @@
 正常情况下，第二种方式是可以明显加快查找速度的。在这里，目录就可以理解为索引。
 索引实现原理Mysql的索引是存储引擎实现的，MyIsam、InnoDB是采用BTree数据结构实现的索引。BTree介绍
 索引分类唯一索引un">
-<meta property="og:updated_time" content="2017-04-21T07:55:44.000Z">
+<meta property="og:updated_time" content="2017-04-21T08:27:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mysql索引实现原理">
 <meta name="twitter:description" content="本文说明mysql索引的实现原理以及索引使用
@@ -381,6 +381,10 @@
 <li><code>where a=1 and c=3</code>只能命中a字段</li>
 <li><code>where b=2</code>等非以a字段开头的查询都无法命中索引</li>
 </ol>
+<h3 id="explain"><a href="#explain" class="headerlink" title="explain"></a>explain</h3><p><code>explain</code>可以用来提供sql语句执行信息，可以配合<code>select delete insert replace update</code>使用。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mysql&gt; explain select * from shopinfo_for_proto where  userid=22681834 and zdid=85570921;</div><div class="line">+----+-------------+--------------------+------+---------------+--------+---------+-------+------+-------------+</div><div class="line">| id | select_type | table              | type | possible_keys | key    | key_len | ref   | rows | Extra       |</div><div class="line">+----+-------------+--------------------+------+---------------+--------+---------+-------+------+-------------+</div><div class="line">|  1 | SIMPLE      | shopinfo_for_proto | ref  | userid        | userid | 8       | const |   16 | Using where |</div><div class="line">+----+-------------+--------------------+------+---------------+--------+---------+-------+------+-------------+</div></pre></td></tr></table></figure>
+<p>从中可以分析出是否命中了缓存，<code>key</code>表示实际命中的缓存，<code>key_len</code>表示命中的缓存大小，可以用来分析命中了多列索引中的几列。</p>
+<p><code>explain</code>输出的各字段的<a href="https://dev.mysql.com/doc/refman/5.7/en/explain-output.html" target="_blank" rel="external">详细解释见官网</a></p>
 
       
     </div>
@@ -550,7 +554,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#索引是什么"><span class="nav-number">1.</span> <span class="nav-text">索引是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引实现原理"><span class="nav-number">2.</span> <span class="nav-text">索引实现原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引分类"><span class="nav-number">3.</span> <span class="nav-text">索引分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#唯一索引"><span class="nav-number">3.1.</span> <span class="nav-text">唯一索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全文索引"><span class="nav-number">3.2.</span> <span class="nav-text">全文索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单列索引与多列索引"><span class="nav-number">3.3.</span> <span class="nav-text">单列索引与多列索引</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#索引是什么"><span class="nav-number">1.</span> <span class="nav-text">索引是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引实现原理"><span class="nav-number">2.</span> <span class="nav-text">索引实现原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引分类"><span class="nav-number">3.</span> <span class="nav-text">索引分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#唯一索引"><span class="nav-number">3.1.</span> <span class="nav-text">唯一索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全文索引"><span class="nav-number">3.2.</span> <span class="nav-text">全文索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单列索引与多列索引"><span class="nav-number">3.3.</span> <span class="nav-text">单列索引与多列索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#explain"><span class="nav-number">3.4.</span> <span class="nav-text">explain</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
