@@ -46,7 +46,17 @@ FULLTEXT(title)
 4. `where a=1 and c=3`只能命中a字段
 5. `where b=2`等非以a字段开头的查询都无法命中索引
 
-### explain
+**可以总结为**：若要命中索引，where子条件一定要以a字段开始，具体能命中索引中的几列，用最左前缀方式与索引列进行匹配即可知。
+
+### MyIsam和InnoDB索引的不同之处
+`MyIsam`可以不提供主键，表中数据是按顺序储存，索引BTree的叶节点的value字段不会存储真正的值，而是对应数据行的地址。
+
+`InnoDB`必须要提供主键，表结构就是一个按照主键生成的BTree，其他索引保存的则是主键索引的值，非主键索引查询时，要先查到主键索引值，再通过主键索引值到表结构中查询相应的行。
+
+**`MyIsam`**查询性能更好些，但是不支持事务；  
+**`InnoDB`**支持事务。
+
+### explain语句
 `explain`可以用来提供sql语句执行信息，可以配合`select delete insert replace update`使用。
 
 ```sql
