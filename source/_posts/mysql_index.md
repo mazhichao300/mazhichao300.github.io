@@ -45,3 +45,19 @@ FULLTEXT(title)
 3. `where a=1 and b=2 and c=3`可以命中索引的全部字段
 4. `where a=1 and c=3`只能命中a字段
 5. `where b=2`等非以a字段开头的查询都无法命中索引
+
+### explain
+`explain`可以用来提供sql语句执行信息，可以配合`select delete insert replace update`使用。
+
+```sql
+mysql> explain select * from shopinfo_for_proto where  userid=22681834 and zdid=85570921;
++----+-------------+--------------------+------+---------------+--------+---------+-------+------+-------------+
+| id | select_type | table              | type | possible_keys | key    | key_len | ref   | rows | Extra       |
++----+-------------+--------------------+------+---------------+--------+---------+-------+------+-------------+
+|  1 | SIMPLE      | shopinfo_for_proto | ref  | userid        | userid | 8       | const |   16 | Using where |
++----+-------------+--------------------+------+---------------+--------+---------+-------+------+-------------+
+```
+
+从中可以分析出是否命中了缓存，`key`表示实际命中的缓存，`key_len`表示命中的缓存大小，可以用来分析命中了多列索引中的几列。
+
+`explain`输出的各字段的[详细解释见官网](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html)
