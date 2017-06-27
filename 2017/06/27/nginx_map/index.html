@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="mysql," />
+  <meta name="keywords" content="nginx," />
 
 
 
@@ -84,28 +84,25 @@
 
 
 
-<meta name="description" content="实现记录有则更新，无则插入
+<meta name="description" content="项目中一个接口需要跨域支持，允许一部分的域名进行调用，这里配合nginx map进行允许跨域处理。
 
-ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICATE KEY UPDATE语句12INSERT INTO table (a,b,c) VALUES (1,2,3),(4,5,6)ON DUPLICATE KEY UPDATE c=3;
-
-参考文档ON DUPLICATE KEY UPDATE重复插入时更新">
+mapmap为一个变量设置的映射表，在http段中进行配置。
+语法映射表由两列组成，匹配模式和对应的值。在 map 块里的参数指定了源变量值和结果值的对应关系。匹配模式可以是一个简单的字符串或者正则表达式，使用正则表达式要用(‘~’)。一个正则表达式如果以 “~” 开头，表示这个正则表达式对大小">
 <meta property="og:type" content="article">
-<meta property="og:title" content="insert or update">
-<meta property="og:url" content="http://yoursite.com/2016/12/06/mysql_insert_or_update/index.html">
+<meta property="og:title" content="Nginx Map">
+<meta property="og:url" content="http://yoursite.com/2017/06/27/nginx_map/index.html">
 <meta property="og:site_name" content="Zhichao's Blog">
-<meta property="og:description" content="实现记录有则更新，无则插入
+<meta property="og:description" content="项目中一个接口需要跨域支持，允许一部分的域名进行调用，这里配合nginx map进行允许跨域处理。
 
-ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICATE KEY UPDATE语句12INSERT INTO table (a,b,c) VALUES (1,2,3),(4,5,6)ON DUPLICATE KEY UPDATE c=3;
-
-参考文档ON DUPLICATE KEY UPDATE重复插入时更新">
-<meta property="og:updated_time" content="2017-03-17T09:19:40.000Z">
+mapmap为一个变量设置的映射表，在http段中进行配置。
+语法映射表由两列组成，匹配模式和对应的值。在 map 块里的参数指定了源变量值和结果值的对应关系。匹配模式可以是一个简单的字符串或者正则表达式，使用正则表达式要用(‘~’)。一个正则表达式如果以 “~” 开头，表示这个正则表达式对大小">
+<meta property="og:updated_time" content="2017-06-27T10:11:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="insert or update">
-<meta name="twitter:description" content="实现记录有则更新，无则插入
+<meta name="twitter:title" content="Nginx Map">
+<meta name="twitter:description" content="项目中一个接口需要跨域支持，允许一部分的域名进行调用，这里配合nginx map进行允许跨域处理。
 
-ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICATE KEY UPDATE语句12INSERT INTO table (a,b,c) VALUES (1,2,3),(4,5,6)ON DUPLICATE KEY UPDATE c=3;
-
-参考文档ON DUPLICATE KEY UPDATE重复插入时更新">
+mapmap为一个变量设置的映射表，在http段中进行配置。
+语法映射表由两列组成，匹配模式和对应的值。在 map 块里的参数指定了源变量值和结果值的对应关系。匹配模式可以是一个简单的字符串或者正则表达式，使用正则表达式要用(‘~’)。一个正则表达式如果以 “~” 开头，表示这个正则表达式对大小">
 
 
 
@@ -126,9 +123,9 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/06/mysql_insert_or_update/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/27/nginx_map/"/>
 
-  <title> insert or update | Zhichao's Blog </title>
+  <title> Nginx Map | Zhichao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -280,7 +277,7 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
             
             
               
-                insert or update
+                Nginx Map
               
             
           </h1>
@@ -292,8 +289,8 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-06T19:51:28+08:00" content="2016-12-06">
-              2016-12-06
+            <time itemprop="dateCreated" datetime="2017-06-27T17:58:28+08:00" content="2017-06-27">
+              2017-06-27
             </time>
           </span>
 
@@ -345,11 +342,12 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
 
       
         <blockquote>
-<p>实现记录有则更新，无则插入</p>
+<p>项目中一个接口需要跨域支持，允许一部分的域名进行调用，这里配合nginx map进行允许跨域处理。</p>
 </blockquote>
-<h2 id="ON-DUPLICATE-KEY-UPDATE"><a href="#ON-DUPLICATE-KEY-UPDATE" class="headerlink" title="ON DUPLICATE KEY UPDATE"></a>ON DUPLICATE KEY UPDATE</h2><p>需要先设置UNIQUE KEY索引，然后使用ON DUPLICATE KEY UPDATE语句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">INSERT INTO table (a,b,c) VALUES (1,2,3),(4,5,6)</div><div class="line">ON DUPLICATE KEY UPDATE c=3;</div></pre></td></tr></table></figure></p>
-<hr>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://lobert.iteye.com/blog/1604122" target="_blank" rel="external">ON DUPLICATE KEY UPDATE重复插入时更新</a></p>
+<h1 id="map"><a href="#map" class="headerlink" title="map"></a>map</h1><p>map为一个变量设置的映射表，在http段中进行配置。</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>映射表由两列组成，匹配模式和对应的值。在 map 块里的参数指定了源变量值和结果值的对应关系。匹配模式可以是一个简单的字符串或者正则表达式，使用正则表达式要用(‘~’)。<br>一个正则表达式如果以 “~” 开头，表示这个正则表达式对大小写敏感。以 “~*”开头，表示这个正则表达式对大小写不敏感。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">map $var1 $var2 &#123; </div><div class="line">    default &apos;&apos;;</div><div class="line">    x y;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="跨域支持实例"><a href="#跨域支持实例" class="headerlink" title="跨域支持实例"></a>跨域支持实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">map $http_origin $corsHost &#123;</div><div class="line">    default 0;</div><div class="line"></div><div class="line">    &quot;~https://www.baidu.com&quot;   $http_origin;</div><div class="line">    &quot;~.xx.com&quot;   $http_origin;</div><div class="line">    &quot;~.yy.com&quot;   $http_origin;</div><div class="line">&#125;</div><div class="line"></div><div class="line">server &#123;</div><div class="line">    listen 80;</div><div class="line">    ...</div><div class="line"></div><div class="line">    location ~ ^/api &#123;</div><div class="line">        root xxx;</div><div class="line">        fastcgi_pass xxx;</div><div class="line">        add_header      Access-Control-Allow-Origin $corsHost;</div><div class="line">        add_header      Access-Control-Allow-Credentials true;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -372,7 +370,7 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
       
         <div class="post-tags">
           
-            <a href="/tags/mysql/" rel="tag">#mysql</a>
+            <a href="/tags/nginx/" rel="tag">#nginx</a>
           
         </div>
       
@@ -381,17 +379,13 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/05/card-safe/" rel="next" title="信用卡安全">
-                <i class="fa fa-chevron-left"></i> 信用卡安全
+              <a href="/2017/05/08/spring_boot_mybatis/" rel="next" title="spring boot mybatis">
+                <i class="fa fa-chevron-left"></i> spring boot mybatis
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/06/mysql_load_data_infile/" rel="prev" title="Mysql load data infile">
-                Mysql load data infile <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -523,7 +517,7 @@ ON DUPLICATE KEY UPDATE需要先设置UNIQUE KEY索引，然后使用ON DUPLICAT
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ON-DUPLICATE-KEY-UPDATE"><span class="nav-number">1.</span> <span class="nav-text">ON DUPLICATE KEY UPDATE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">2.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#map"><span class="nav-number">1.</span> <span class="nav-text">map</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语法"><span class="nav-number">1.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨域支持实例"><span class="nav-number">1.2.</span> <span class="nav-text">跨域支持实例</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
