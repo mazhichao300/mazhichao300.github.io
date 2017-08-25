@@ -1,0 +1,682 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Python保留N位小数点1234567891011121314151617a = 1b = 3n = 2# 默认两个Int除，结果也是int，需要转为float# 方法一：用roundround(float(a) / b, n)# 方法二：用formatformat(float(a) / b, &apos;.2f&apos;)# 方法三：用 % 格式化&apos;%.2f&apos; %(float(a) / b)#方法三扩展，展现百">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python(2)的一些小语法">
+<meta property="og:url" content="http://yoursite.com/2017/08/25/python_syntax/index.html">
+<meta property="og:site_name" content="Zhichao's Blog">
+<meta property="og:description" content="Python保留N位小数点1234567891011121314151617a = 1b = 3n = 2# 默认两个Int除，结果也是int，需要转为float# 方法一：用roundround(float(a) / b, n)# 方法二：用formatformat(float(a) / b, &apos;.2f&apos;)# 方法三：用 % 格式化&apos;%.2f&apos; %(float(a) / b)#方法三扩展，展现百">
+<meta property="og:updated_time" content="2017-08-25T08:20:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python(2)的一些小语法">
+<meta name="twitter:description" content="Python保留N位小数点1234567891011121314151617a = 1b = 3n = 2# 默认两个Int除，结果也是int，需要转为float# 方法一：用roundround(float(a) / b, n)# 方法二：用formatformat(float(a) / b, &apos;.2f&apos;)# 方法三：用 % 格式化&apos;%.2f&apos; %(float(a) / b)#方法三扩展，展现百">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/25/python_syntax/"/>
+
+  <title> Python(2)的一些小语法 | Zhichao's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?932211c84992d4c9ec09509843aedcdd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Zhichao's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Python(2)的一些小语法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-08-25T15:13:28+08:00" content="2017-08-25">
+              2017-08-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Python保留N位小数点"><a href="#Python保留N位小数点" class="headerlink" title="Python保留N位小数点"></a>Python保留N位小数点</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">a = <span class="number">1</span></div><div class="line">b = <span class="number">3</span></div><div class="line">n = <span class="number">2</span></div><div class="line"></div><div class="line"><span class="comment"># 默认两个Int除，结果也是int，需要转为float</span></div><div class="line"></div><div class="line"><span class="comment"># 方法一：用round</span></div><div class="line">round(float(a) / b, n)</div><div class="line"></div><div class="line"><span class="comment"># 方法二：用format</span></div><div class="line">format(float(a) / b, <span class="string">'.2f'</span>)</div><div class="line"></div><div class="line"><span class="comment"># 方法三：用 % 格式化</span></div><div class="line"><span class="string">'%.2f'</span> %(float(a) / b)</div><div class="line"></div><div class="line"><span class="comment">#方法三扩展，展现百分比， %%表示输出%</span></div><div class="line"><span class="string">'%.2f%%'</span> %(<span class="number">100.0</span> * a / b)</div></pre></td></tr></table></figure>
+<h3 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3><p><code>threading</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> threading</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span><span class="params">(name)</span>:</span></div><div class="line">    <span class="keyword">print</span> name</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">func2</span><span class="params">(name)</span>:</span></div><div class="line">    <span class="keyword">print</span> <span class="string">"hello, %s"</span> % name</div><div class="line"></div><div class="line">threads = []</div><div class="line">t1 = threading.Thread(target=func1, args=(<span class="string">'ma'</span>))</div><div class="line">t2 = threading.Thread(target=func2, args=(<span class="string">'world'</span>))</div><div class="line">threads.append(t1)</div><div class="line">threads.append(t2)</div><div class="line"></div><div class="line"><span class="keyword">for</span> t <span class="keyword">in</span> threads:</div><div class="line">    t.setDaemon(<span class="keyword">True</span>)</div><div class="line">    t.start()</div></pre></td></tr></table></figure>
+<h3 id="判断变量类型"><a href="#判断变量类型" class="headerlink" title="判断变量类型"></a>判断变量类型</h3><p><code>isinstance(x, type)</code></p>
+<ul>
+<li>判断int： isinstance(x,int)</li>
+<li>判断string: isinstance(s, basestring) or isinstance(s, (str, unicode))</li>
+</ul>
+<h3 id="urllib2网络请求"><a href="#urllib2网络请求" class="headerlink" title="urllib2网络请求"></a>urllib2网络请求</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># GET请求</span></div><div class="line"><span class="keyword">import</span> urllib,urllib2 </div><div class="line"></div><div class="line">uri = <span class="string">'https://www.baidu.com/'</span>  </div><div class="line"></div><div class="line">ret = urllib2.urlopen(uri).read()</div><div class="line"></div><div class="line"><span class="comment">#POST请求</span></div><div class="line">url = <span class="string">'http://www.someserver.com/cgi-bin/register.cgi'</span>   </div><div class="line">  </div><div class="line">values = &#123;<span class="string">'name'</span> : <span class="string">'Michael Foord'</span>,   </div><div class="line">          <span class="string">'location'</span> : <span class="string">'Northampton'</span>,   </div><div class="line">          <span class="string">'language'</span> : <span class="string">'Python'</span> &#125;   </div><div class="line">  </div><div class="line">data = urllib.urlencode(values)   <span class="comment"># 具体data格式视服务端而定，比如json，data = json.dumps(values)</span></div><div class="line">  </div><div class="line">req = urllib2.Request(url, data)   </div><div class="line">  </div><div class="line">response = urllib2.urlopen(req)   </div><div class="line">  </div><div class="line">the_page = response.read()</div></pre></td></tr></table></figure>
+<p><strong>为urlopen设置可选参数:</strong> <code>timeout</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">urllib2.urlopen(r, data=<span class="keyword">None</span>, timeout=<span class="number">3</span>)</div></pre></td></tr></table></figure>
+<h3 id="模块路径设置"><a href="#模块路径设置" class="headerlink" title="模块路径设置"></a>模块路径设置</h3><ul>
+<li>代码中动态添加： <code>sys.path.append(&#39;/home/xxx/xxx&#39;)</code></li>
+<li>设置环境变量<code>PYTHONPATH</code></li>
+</ul>
+<h3 id="JSON处理"><a href="#JSON处理" class="headerlink" title="JSON处理"></a>JSON处理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">json.dumps()</div><div class="line"></div><div class="line">json.loads()</div></pre></td></tr></table></figure>
+<p><a href="http://www.runoob.com/python/python-json.html" target="_blank" rel="external">详情参考</a></p>
+<h3 id="时间处理"><a href="#时间处理" class="headerlink" title="时间处理"></a>时间处理</h3><p>常用的时间戳： <code>int(time.time())</code><br><a href="http://www.cnblogs.com/snow-backup/p/5063665.html" target="_blank" rel="external">更多用法可参考</a></p>
+<h3 id="python函数是引用"><a href="#python函数是引用" class="headerlink" title="python函数是引用"></a>python函数是引用</h3><p>python不允许程序员选择采用传值还是传引用。Python参数传递采用的肯定是“传对象引用”的方式。这种方式相当于传值和传引用的一种综合。如果函数收到的是一个可变对象（比如字典或者列表）的引用，就能修改对象的原始值－－相当于通过“传引用”来传递对象。如果函数收到的是一个不可变对象（比如数字、字符或者元组）的引用，就不能直接修改原始对象－－相当于通过“传值’来传递对象。</p>
+<p><a href="http://www.cnblogs.com/loleina/p/5276918.html" target="_blank" rel="external">python函数传参是传值还是传引用？</a></p>
+<hr>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://blog.csdn.net/wo_renfanzi/article/details/51477796" target="_blank" rel="external">%格式化和format格式化</a></li>
+<li><a href="http://www.cnblogs.com/fnng/p/3670789.html" target="_blank" rel="external">python 多线程就这么简单</a></li>
+<li><a href="https://stackoverflow.com/questions/4843173/how-to-check-if-type-of-a-variable-is-string" target="_blank" rel="external">How to check if type of a variable is string?</a></li>
+<li><a href="http://blog.csdn.net/mack415858775/article/details/39696107" target="_blank" rel="external">python通过get方式,post方式发送http请求和接收http响应-urllib urllib2</a></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag">#Python</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/18/how_hu_c/" rel="next" title="外地户口如何在上海办理沪C">
+                <i class="fa fa-chevron-left"></i> 外地户口如何在上海办理沪C
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Ma Zhichao" />
+          <p class="site-author-name" itemprop="name">Ma Zhichao</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://ammilly.github.io/" title="Amy's Blog" target="_blank">Amy's Blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.dytt8.net/" title="电影天堂" target="_blank">电影天堂</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python保留N位小数点"><span class="nav-number">1.</span> <span class="nav-text">Python保留N位小数点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多线程"><span class="nav-number">2.</span> <span class="nav-text">多线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断变量类型"><span class="nav-number">3.</span> <span class="nav-text">判断变量类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#urllib2网络请求"><span class="nav-number">4.</span> <span class="nav-text">urllib2网络请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块路径设置"><span class="nav-number">5.</span> <span class="nav-text">模块路径设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON处理"><span class="nav-number">6.</span> <span class="nav-text">JSON处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间处理"><span class="nav-number">7.</span> <span class="nav-text">时间处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#python函数是引用"><span class="nav-number">8.</span> <span class="nav-text">python函数是引用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number"></span> <span class="nav-text">参考</span></a></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ma Zhichao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+<script type="text/javascript" async src="https://mazhichao300.github.io/js/src/push.js">
+</script>
+
+
+</body>
+</html>
