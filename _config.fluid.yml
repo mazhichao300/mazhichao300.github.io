@@ -2,15 +2,20 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
+navbar:
+  blog_title: Zhichao
+
 # Site
 title: Zhichao
-subtitle:
+subtitle: abcccc
 description:
 author: Ma Zhichao
-language: zh-CN
+#language: zh-CN
+language: en
 timezone:
 
-baidu_analytics: 932211c84992d4c9ec09509843aedcdd
+web_analytics:
+    baidu: 932211c84992d4c9ec09509843aedcdd
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -75,3 +80,15 @@ deploy:
   type: git
   repository: git@github.com:mazhichao300/mazhichao300.github.io.git
   branch: master
+
+footer:
+  statistics:
+    enable: true
+    source: "busuanzi"  # 可选 leancloud | busuanzi  根据自己需求选择
+    pv_format: "总访问量 {} 次"  # 显示的文本，{}是数字的占位符（必须包含)，下同
+    uv_format: "总访客数 {} 人"
+
+index:
+  slogan:
+    enable: true
+    text: 今日事，今日必
